@@ -46,6 +46,11 @@ Future Improvements
 - Improved UI/UX
 - Template export/import
 
+License
+
+This project is released under the CC0 1.0 Universal license (public domain).
+You are free to use, modify, and distribute it without restriction.
+
 Project Status
 
 Completed basic working version used in a real support workflow. Future improvements may be added over time.
