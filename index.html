@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CtrlV</title>
+<style>
+
+/* FOOTER WARNING */
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+
+/* PAGE TAB */
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: rgb(0, 0, 0);
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Script {background-color: rgb(255, 255, 255);}
+#Email {background-color: rgb(255, 255, 255);}
+#Annotation {background-color: rgb(255, 255, 255);}
+#Spam {background-color: rgb(255, 255, 255);}
+
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+      
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+      
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #f1f1f1;
+    }
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Script', this, 'red')" id="defaultOpen">Script</button>
+<button class="tablink" onclick="openPage('Email', this, 'green')">Email</button>
+<button class="tablink" onclick="openPage('Annotation', this, 'blue')">Annotation</button>
+<button class="tablink" onclick="openPage('Spam', this, 'orange')">Spam</button>
+
+<div id="Script" class="tabcontent">
+<style>
+  .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+    
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+    
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+</style>
+</head>
+<body>
+
+  <button class="collapsible">Opening</button>
+  <div class="content">
+    <textarea id="a1" name="a1" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+    <button onclick="myFunction1()">Copy text</button>
+    <br>
+    <textarea id="a2" name="a2" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+    <button onclick="myFunction2()">Copy text</button>
+    <br>
+    <textarea id="a3" name="a3" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+    <button onclick="myFunction3()">Copy text</button>
+    <br>
+    <textarea id="a4" name="a4" rows="2" cols="100">Enter Text Here</textarea>Spanish
+      <br>
+    <button onclick="myFunction4()">Copy text</button>
+    <br>
+    <textarea id="a5" name="a5" rows="2" cols="100">Enter Text Here</textarea>French
+      <br>
+    <button onclick="myFunction5()">Copy text</button>
+
+  </div>
+  <button class="collapsible">Acknowledgement & Empathy</button>
+  <div class="content">
+    <textarea id="b1" name="b1" rows="2" cols="100">Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction6()">Copy text</button>
+    <br>
+    <textarea id="b2" name="b2" rows="2" cols="100">Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction7()">Copy text</button>
+    <br>
+    <textarea id="b3" name="b3" rows="2" cols="100">Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction8()">Copy text</button>
+    <br>
+    <textarea id="b4" name="b4" rows="2" cols="100">Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction9()">Copy text</button>
+    <br>
+    <textarea id="b5" name="b5" rows="2" cols="100">Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction10()">Copy text</button>
+    <br>
+  </div>
+  <button class="collapsible">Research & Hold</button>
+  <div class="content">
+    <textarea id="c1" name="c1" rows="2" cols="100">Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction11()">Copy text</button>
+    <br>
+    <textarea id="c2" name="c2" rows="2" cols="100">Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction12()">Copy text</button>
+    <br>
+  </div>
+  <button class="collapsible">Resolution</button>
+  <div class="content">
+    <button class="collapsible">Suspicious</button>
+    <div class="content">
+      <p>INVESTIGATION INITIATED</p>
+      <textarea id="d1" name="d1" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction13()">Copy text</button>
+      <br>
+      <p>ASKED FOR RECEIPT</p>
+      <textarea id="d2" name="d2" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction14()">Copy text</button>
+      <br>
+      <textarea id="d4" name="d4" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction16()">Copy text</button>
+      <br>
+      <p>ASKED FOR POLICE REPORT</p>
+      <textarea id="d3" name="d3" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction15()">Copy text</button>
+      <br>
+      <textarea id="d5" name="d5" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction17()">Copy text</button>
+      <br>
+      <p>Standard Return Policy</p>
+      <textarea id="vt16" name="vt16" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction75()">Copy text</button>
+      <br>
+      <p>PHOTO REQUESTED</p>
+      <textarea id="d6" name="d6" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction18()">Copy text</button>
+      <br>      
+    </div>
+    <button class="collapsible">Normal</button>
+    <div class="content">
+      <p>Price Match</p>
+      <textarea id="d7" name="d7" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction19()">Copy text</button>
+      <br>
+      <p>Restocking Fee Denial</p>
+      <textarea id="vt13" name="vt13" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction72()">Copy text</button>
+      <br>
+      <p>Exchange Rate Denial</p>
+      <textarea id="vt14" name="vt14" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction73()">Copy text</button>
+      <br>
+      <p>Business</p>
+      <textarea id="vt15" name="vt15" rows="2" cols="100">Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction74()">Copy text</button>
+      <br>
+    </div>
+  </div>
+  <button class="collapsible">Additional Help</button>
+  <div class="content">
+    <textarea id="g1" name="g1" rows="2" cols="100">Is there anything else I can help you with?</textarea>
+    <br>
+    <button onclick="myFunction29()">Copy text</button>
+    <br>
+    <textarea id="g2" name="g2" rows="2" cols="100">Would there be anything else apart from this, that I may assist you with?</textarea>
+    <br>
+    <button onclick="myFunction30()">Copy text</button>
+    <br>
+    <textarea id="g3" name="g3" rows="2" cols="100">Are we good to go?</textarea>
+    <br>
+    <button onclick="myFunction31()">Copy text</button>
+    <br>
+  </div>
+  <button class="collapsible">Closing</button>
+  <div class="content">
+    <textarea id="f1" name="f1" rows="2" cols="100">Thank You for contacting us. Stay safe & have a great day ahead.</textarea>
+    <br>
+    <button onclick="myFunction26()">Copy text</button>
+    <br>
+    <textarea id="f2" name="f2" rows="2" cols="100">Since we have been idle for 2 minutes, I have to disconnect this chat. We hope to see you again. Thank You for contacting us.</textarea>
+    <br>
+    <button onclick="myFunction27()">Copy text</button>
+    <br>
+    <textarea id="f3" name="f3" rows="2" cols="100">It seems you are away from the chat. I hope I've addressed all your concerns. If you need help with anything else, feel free to contact us again. Have a great day ahead.</textarea>
+    <br>
+    <button onclick="myFunction28()">Copy text</button>
+    <br>
+  </div>
+  <button class="collapsible">Last Word</button>
+  <div class="content">
+    <textarea id="e1" name="e1" rows="2" cols="100">I understand that it's frustrating, but the response you were given previously was correct. We aren't able to provide further insight or action on this matter. If there's nothing else you'd like to discuss, I have to end this chat.</textarea>
+    <br>
+    <button onclick="myFunction20()">Copy text</button>
+    <br>
+    <textarea id="e2" name="e2" rows="2" cols="100">I'm unable to offer additional insight on this matter. I have to disconnect this chat now.</textarea>
+    <br>
+    <button onclick="myFunction21()">Copy text</button>
+    <br>
+    <textarea id="e3" name="e3" rows="2" cols="100">Since we have explained the resolution multiple times and seems that you are not satisfied with the resolution, we are unable to take any action and are forced to close the chat.</textarea>
+    <br>
+    <button onclick="myFunction22()">Copy text</button>
+    <br>
+    <textarea id="e4" name="e4" rows="2" cols="100">
+CHAT Disconnect
+Reason for contact:
+Answer Provided: Customer was Warned
+Disconnect happened because customer would not accept the answer.</textarea>
+    <br>
+    <button onclick="myFunction23()">Copy text</button>
+    <br>
+    <textarea id="e5" name="e5" rows="2" cols="100">I can see you're upset, and I can assure you that I'm here to help and will do everything possible to resolve this. But, if you continue to use such language , I will have to terminate this chat.</textarea>
+    <br>
+    <button onclick="myFunction24()">Copy text</button>
+    <br>
+    <textarea id="e6" name="e6" rows="2" cols="100">I'm sure the entire situation is not pleasant but would request you to refrain from using Profanity.</textarea>
+    <br>
+    <button onclick="myFunction25()">Copy text</button>
+    <br>
+  </div>
+    
+</div>
+
+<div id="Email" class="tabcontent">
+  <button type="button" class="collapsible">For FEEDBACK & RATINGS</button>
+  <div class="content">
+    <textarea id="i1" name="i1" rows="30" cols="100">
+Hello
+
+I am  from .
+      
+Firstly, I want to thank you for your time & effort contacting us today about your concern.
+      
+I m so sorry about the issue you have faced through.
+      
+I understand your concern and we are here to help you out. Be assured of it.
+      
+Just in case, there is anything else that we can help you with. Please feel free to contact us and we would be more than happy to assist you further.
+      
+Most questions are answered in Your Account or in our Help pages.
+      
+Here's a link to our Contact Us page:
+      
+      
+Thank you for your understanding and patience.
+      
+Hope this helps.
+      
+Have a good day.</textarea>
+    <br>
+    <button onclick="myFunction32()">Copy text</button>
+    </div>
+    <button type="button" class="collapsible">Regular</button>
+    <div class="content">
+    <textarea id="i2" name="i2" rows="30" cols="100">
+Hello ,
+
+Thank you for contacting us. I am  from Customer Service.
+      
+I'm writing to you in response to your email regarding
+      
+      
+      
+      
+For any further assistance, please let us know. We will be happy to help you.
+      
+      
+I hope it helps.
+      
+Thank you for contacting us. Stay safe & have a great day ahead.</textarea>
+      <br>
+    <button onclick="myFunction33()">Copy text</button>
+    <br>
+  </div>
+  <button type="button" class="collapsible">Refunded</button>
+  <div class="content">
+  <textarea id="i3" name="i3" rows="20" cols="100">
+Hello,
+
+Thank you for contacting us.
+    
+I'm sorry to hear about the problem you've had with #[ITEM] from Order#[ORDER ID].
+    
+Thanks for sharing the item receipt with us. I appreciate your help and effort in this case.
+    
+I've requested a refund. You'll see the refund on your original payment method in the next 3-5 business days.
+    
+On the date the refund is completed, we'll send you an e-mail confirming the date, amount and payment details. After receiving this confirmation e-mail, you can view the refund details on the Order Summary in Your Account. Completed refunds will appear at the bottom of an individual order summary page.
+    
+I hope this helps. We look forward to seeing you again soon.</textarea>
+  <br>
+  <button onclick="myFunction34()">Copy text</button>
+  <br>
+  </div>
+  <button type="button" class="collapsible">Already Refunded</button>
+  <div class="content">
+  <textarea id="i4" name="i4" rows="20" cols="100">
+Hello,
+
+Thank you for contacting us.
+    
+I'm sorry to hear about the problem you've had with #[ITEM] from #[ORDER ID].
+    
+Thanks for sharing the item receipt with us. I appreciate your help and effort in this case.
+    
+Upon checking I do check that the refund were already initiated from our end on date. You'll see the refund on your original payment method in the next 3-5 business days.
+    
+On the date the refund is completed, we'll send you an e-mail confirming the date, amount and payment details. After receiving this confirmation e-mail, you can view the refund details on the Order Summary in Your Account. Completed refunds will appear at the bottom of an individual order summary page.
+    
+I hope this helps. We look forward to seeing you again soon.</textarea>
+  <br>
+  <button onclick="myFunction35()">Copy text</button>
+  <br>
+  </div>
+  <button type="button" class="collapsible">More Info</button>
+  <div class="content">
+  <textarea id="i5" name="i5" rows="20" cols="100">
+Hello,
+
+I received a message from my colleague regarding your recent phone_call_chat_email about TOPIC.
+    
+Unfortunately, we need some more information about your situation before we're able to assist you.
+When you have a free moment, please respond to this email with the following information:
+for example:
+    
+Order ID:
+Name of the item:
+Date the order was placed:
+Issue with the order:
+    
+I'm sorry for this inconvenience. We look forward to resolving this situation as soon as we hear back from you.</textarea>
+  <br>
+  <button onclick="myFunction36()">Copy text</button>
+  <br>
+  </div>
+  <button type="button" class="collapsible">Live Contact</button>
+  <div class="content">
+  <textarea id="i6" name="i6" rows="30" cols="100">
+Hello,
+
+Thank you for contacting Customer Support.
+    
+Please contact us over the phone or chat. This way, you can speak to our live customer support team who can help you.
+    
+I realize that, at this point, asking you to contact us again would be disappointing; however, we really feel that the best way to assist you with this concern is over the phone or chat. Your patience and understanding are greatly appreciated.
+    
+To contact us via phone call, please click the below link:
+    
+    
+Or simply enter your phone number in the Phone tab, and we'll call you. Contacting us through the website ensures that we have your account information ready when we call. If you can't access this feature, here are our customer service phone numbers:
+    
+- India:
+- U.S. and Canada:
+- International:
+    
+Alternatively you can also chat with us by using the below link:
+    
+Chat: 
+    
+Please be assured once you have contacted us over the live medium we will resolve the issue and help you with the best.
+    
+Thanks for your patience and understanding. We look forward to seeing you again soon.</textarea>
+  <br>
+  <button onclick="myFunction37()">Copy text</button>
+  </div>
+  <button type="button" class="collapsible">Returns Item Receipt</button>
+  <div class="content">
+  <textarea id="vt12" name="vt12" rows="30" cols="100">
+Hello,
+
+We apologize that you [haven't yet received a refund / have been charged for a return] for order #[ORDER ID]. We're happy to assist you further.
+    
+[ADD IF, INCOMPLETE/INCORRECT ITEM RECEIPT: However, the Item Receipt you provided is [INCOMPLETE/INCORRECT]. Please correct [issue with Item Receipt] and resubmit the receipt.]
+    
+[ADD IF, INVALID FILE FORMAT: However, we're unable to open the Item Receipt you provided.]
+    
+[ADD IF, MISSING ITEM RECEIPT: However, we can’t take any action without first receiving the requested Item Receipt.]
+    
+Please reply to this the email with your responses to the following questions in English or Spanish. You must reply from the email address associated with your account that you used to place this order.
+    
+You’re able send your responses directly in an email or through an attachment such as a PDF or JPG file.
+    
+To be considered for review, the Item Receipt has to be submitted on or before this date: [INITIAL REQUEST DATE + 30 DAYS]. Send one set of responses for each package containing an item that you returned to us but haven't yet received a refund.
+    
+After you submit your Item Receipt, you may be asked to complete additional steps before we can complete our investigation.
+    
+Item Receipt
+    
+1. Order number:_______________
+    
+2. Today's date. (MM/DD/YYYY):_______________
+    
+3. Date return item was shipped. (MM/DD/YYYY):_______________
+    
+4. How did you ship back your return? (For example: UPS picks up, UPS drop off, mailed with FedEx or United States Postal Service, etc. ):_______________.
+    
+5. Description of the item returned (item name, color, size, quantity, etc.):_______________.
+    
+6. Have you experienced prior issues with returning items to us? _______________
+    
+Thank you for your cooperation.</textarea>
+  <br>
+  <button onclick="myFunction71()">Copy text</button>
+  </div>
+</div>
+
+<div id="Annotation" class="tabcontent">
+  <button type="button" class="collapsible">DNR</button>
+  <div class="content"> 
+    
+
+      <button class="collapsible">Investigation Initiated</button>
+      <div class="content">
+        <textarea id="y1" name="y1" rows="6" cols="100">
+Enter Text Here
+        </textarea>
+        <br>
+        <button onclick="myFunction40()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Investigation Ongoing</button>
+      <div class="content">
+        <textarea id="y2" name="y2" rows="6" cols="100">
+Enter Text Here
+        </textarea>
+        <br>
+        <button onclick="myFunction41()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Investigation Ended</button>
+      <div class="content">
+        <textarea id="y3" name="y3" rows="6" cols="100">
+Enter Text Here
+        </textarea>
+        <br>
+        <button onclick="myFunction42()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Item Receipt Requested</button>
+      <div class="content">
+        <textarea id="y4" name="y4" rows="6" cols="100">
+Enter Text Here 
+        </textarea>
+        <br>
+        <button onclick="myFunction43()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Item Receipt Valid</button>
+      <div class="content">
+        <textarea id="y5" name="y5" rows="6" cols="100">
+Enter Text Here
+        </textarea>
+        <br>
+        <button onclick="myFunction44()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Item Receipt Invalid</button>
+      <div class="content">
+        <textarea id="y6" name="y6" rows="6" cols="100">
+Enter Text Here
+        </textarea>
+        <br>
+        <button onclick="myFunction45()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Police Report Requested</button>
+      <div class="content">
+        <textarea id="y7" name="y7" rows="6" cols="100">
+Enter Text Here 
+        </textarea>
+        <br>
+        <button onclick="myFunction46()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Police Report Invalid</button>
+      <div class="content">
+        <textarea id="y8" name="y8" rows="6" cols="100">
+Enter Text Here
+        </textarea>
+        <br>
+        <button onclick="myFunction47()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Follow Retail Policy</button>
+      <div class="content">
+        <textarea id="y9" name="y9" rows="6" cols="100">
+Enter Text Here
+        </textarea>
+        <br>
+        <button onclick="myFunction48()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Traces</button>
+      <div class="content">
+        <textarea id="vt1" name="vt1" rows="6" cols="100">
+Enter Text Here
+        </textarea>
+        <br>
+        <button onclick="myFunction60()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Safelisted</button>
+      <div class="content">
+        <textarea id="vt2" name="vt2" rows="6" cols="100">
+Enter Text Here
+        </textarea>
+        <br>
+        <button onclick="myFunction61()">Copy text</button>
+        <br>
+      </div>
+      
+  </div>
+
+  <button type="button" class="collapsible">Item Missing</button>
+  <div class="content"> 
+
+      <button class="collapsible">Investigation Initiated</button>
+      <div class="content">
+        <textarea id="k1" name="k1" rows="6" cols="100">
+Enter Text Here
+        </textarea>
+        <br>
+        <button onclick="myFunction49()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Investigation Ongoing</button>
+      <div class="content">
+        <textarea id="k2" name="k2" rows="6" cols="100">
+Enter Text Here</textarea>
+        <br>
+        <button onclick="myFunction50()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Investigation Ended</button>
+      <div class="content">
+        <textarea id="k3" name="k3" rows="6" cols="100">
+Enter Text Here</textarea>
+        <br>
+        <button onclick="myFunction51()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Item Receipt Requested</button>
+      <div class="content">
+        <textarea id="k4" name="k4" rows="6" cols="100">
+Enter Text Here</textarea>
+        <br>
+        <button onclick="myFunction52()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Item Receipt Valid</button>
+      <div class="content">
+        <textarea id="k5" name="k5" rows="6" cols="100">
+Enter Text Here</textarea>
+        <br>
+        <button onclick="myFunction53()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Item Receipt Invalid</button>
+      <div class="content">
+        <textarea id="k6" name="k6" rows="6" cols="100">
+Enter Text Here</textarea>
+        <br>
+        <button onclick="myFunction54()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Police Report Requested</button>
+      <div class="content">
+        <textarea id="k7" name="k7" rows="6" cols="100">
+Enter Text Here</textarea>
+        <br>
+        <button onclick="myFunction55()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Police Report Invalid</button>
+      <div class="content">
+        <textarea id="k8" name="k8" rows="6" cols="100">
+Enter Text Here</textarea>
+        <br>
+        <button onclick="myFunction56()">Copy text</button>
+        <br>
+      </div>
+      <button class="collapsible">Follow Retail Policy</button>
+      <div class="content">
+        <textarea id="k9" name="k9" rows="6" cols="100">
+Enter Text Here</textarea>
+          <br>
+          <button onclick="myFunction57()">Copy text</button>
+          <br>
+      </div>
+      <button class="collapsible">Safelisted</button>
+      <div class="content">
+        <textarea id="vt3" name="vt3" rows="6" cols="100">
+Enter Text Here</textarea>
+          <br>
+          <button onclick="myFunction62()">Copy text</button>
+          <br>
+      </div>
+      
+  </div>
+
+  <button type="button" class="collapsible">Pre-Delivery</button>
+  <div class="content"> 
+    <button class="collapsible">Low Risk Pre-Delivery</button>
+    <div class="content">
+      <textarea id="vt8" name="vt8" rows="6" cols="100">
+Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction67()">Copy text</button>
+      <br>
+    </div>
+    <button class="collapsible">Medium Risk Pre-Delivery</button>
+    <div class="content">
+      <textarea id="vt9" name="vt9" rows="6" cols="100">
+Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction68()">Copy text</button>
+      <br>
+    </div>
+    <button class="collapsible">High Risk Pre-Delivery</button>
+    <div class="content">
+      <textarea id="vt10" name="vt10" rows="6" cols="100">
+Enter Text Here</textarea>
+      <br>
+      <button onclick="myFunction69()">Copy text</button>
+      <br>
+    </div>
+  </div>
+
+  <button type="button" class="collapsible">Damaged/Defective</button>
+  <div class="content"> 
+    <textarea id="vt4" name="vt4" rows="6" cols="100">
+Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction63()">Copy text</button>
+    <br>
+  </div>
+
+  <button type="button" class="collapsible">Parts Missing</button>
+  <div class="content"> 
+    <textarea id="vt5" name="vt5" rows="6" cols="100">
+Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction64()">Copy text</button>
+    <br>
+  </div>
+
+  <button type="button" class="collapsible">Wrong Item Received</button>
+  <div class="content"> 
+    <textarea id="vt6" name="vt6" rows="6" cols="100">
+Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction65()">Copy text</button>
+    <br>
+  </div>
+
+  <button type="button" class="collapsible">Return Related</button>
+  <div class="content"> 
+    <textarea id="vt7" name="vt7" rows="6" cols="100">
+Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction66()">Copy text</button>
+    <br>
+  </div>
+
+  <button type="button" class="collapsible">Regular</button>
+  <div class="content">
+    <button type="button" class="collapsible">SUPERVISOR</button>
+    <div class="content"> 
+    <textarea id="k10" name="k10" rows="6" cols="100">
+Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction58()">Copy text</button>
+    <br>
+    </div>
+    <button type="button" class="collapsible">System Error</button>
+    <div class="content"> 
+    <textarea id="k11" name="k11" rows="6" cols="100">
+Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction59()">Copy text</button>
+    <br>
+    </div>
+    <button type="button" class="collapsible">Wrong Transfer</button>
+    <div class="content"> 
+    <textarea id="vt11" name="vt11" rows="6" cols="100">
+Enter Text Here</textarea>
+    <br>
+    <button onclick="myFunction70()">Copy text</button>
+    <br>
+    </div>
+  </div>
+
+</div> 
+
+<div id="Spam" class="tabcontent">
+<h3>Email</h3>
+<textarea id="z1" name="z1" rows="30" cols="100">
+  Paste
+  Email
+  Text
+  Here
+</textarea>
+  <br>
+<button onclick="myFunction38()">Copy text</button>
+<br>
+<h3>Annotation</h3>
+<textarea id="z2" name="z2" rows="7" cols="50">
+  Paste
+  Annotation
+  Here
+</textarea>
+  <br>
+<button onclick="myFunction39()">Copy text</button>
+  
+</div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "5px";
+          } 
+        });
+      }
+
+  function myFunction1() {
+  // Get the text field
+  var copyText = document.getElementById("a1");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+  
+  function myFunction2() {
+  // Get the text field
+  var copyText = document.getElementById("a2");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction3() {
+  // Get the text field
+  var copyText = document.getElementById("a3");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction4() {
+  // Get the text field
+  var copyText = document.getElementById("a4");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction5() {
+  // Get the text field
+  var copyText = document.getElementById("a5");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction6() {
+  // Get the text field
+  var copyText = document.getElementById("b1");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction7() {
+  // Get the text field
+  var copyText = document.getElementById("b2");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction8() {
+  // Get the text field
+  var copyText = document.getElementById("b3");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction9() {
+  // Get the text field
+  var copyText = document.getElementById("b4");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction10() {
+  // Get the text field
+  var copyText = document.getElementById("b5");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction11() {
+  // Get the text field
+  var copyText = document.getElementById("c1");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction12() {
+  // Get the text field
+  var copyText = document.getElementById("c2");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction13() {
+  // Get the text field
+  var copyText = document.getElementById("d1");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction14() {
+  // Get the text field
+  var copyText = document.getElementById("d2");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction15() {
+  // Get the text field
+  var copyText = document.getElementById("d3");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction16() {
+  // Get the text field
+  var copyText = document.getElementById("d4");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction17() {
+  // Get the text field
+  var copyText = document.getElementById("d5");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction18() {
+  // Get the text field
+  var copyText = document.getElementById("d6");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction19() {
+  // Get the text field
+  var copyText = document.getElementById("d7");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction20() {
+  // Get the text field
+  var copyText = document.getElementById("e1");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction21() {
+  // Get the text field
+  var copyText = document.getElementById("e2");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction22() {
+  // Get the text field
+  var copyText = document.getElementById("e3");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction23() {
+  // Get the text field
+  var copyText = document.getElementById("e4");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction24() {
+  // Get the text field
+  var copyText = document.getElementById("e5");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction25() {
+  // Get the text field
+  var copyText = document.getElementById("e6");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction26() {
+  // Get the text field
+  var copyText = document.getElementById("f1");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction27() {
+  // Get the text field
+  var copyText = document.getElementById("f2");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction28() {
+  // Get the text field
+  var copyText = document.getElementById("f3");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction29() {
+  // Get the text field
+  var copyText = document.getElementById("g1");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction30() {
+  // Get the text field
+  var copyText = document.getElementById("g2");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction31() {
+  // Get the text field
+  var copyText = document.getElementById("g3");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction32() {
+  // Get the text field
+  var copyText = document.getElementById("i1");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction33() {
+  // Get the text field
+  var copyText = document.getElementById("i2");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction34() {
+  // Get the text field
+  var copyText = document.getElementById("i3");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction35() {
+  // Get the text field
+  var copyText = document.getElementById("i4");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction36() {
+  // Get the text field
+  var copyText = document.getElementById("i5");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction37() {
+  // Get the text field
+  var copyText = document.getElementById("i6");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction38() {
+  // Get the text field
+  var copyText = document.getElementById("z1");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction39() {
+  // Get the text field
+  var copyText = document.getElementById("z2");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction40() {
+  // Get the text field
+  var copyText = document.getElementById("y1");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction41() {
+  // Get the text field
+  var copyText = document.getElementById("y2");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction42() {
+  // Get the text field
+  var copyText = document.getElementById("y3");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction43() {
+  // Get the text field
+  var copyText = document.getElementById("y4");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction44() {
+  // Get the text field
+  var copyText = document.getElementById("y5");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction45() {
+  // Get the text field
+  var copyText = document.getElementById("y6");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction46() {
+  // Get the text field
+  var copyText = document.getElementById("y7");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction47() {
+  // Get the text field
+  var copyText = document.getElementById("y8");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction48() {
+  // Get the text field
+  var copyText = document.getElementById("y9");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction49() {
+  // Get the text field
+  var copyText = document.getElementById("k1");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction50() {
+  // Get the text field
+  var copyText = document.getElementById("k2");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction51() {
+  // Get the text field
+  var copyText = document.getElementById("k3");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction52() {
+  // Get the text field
+  var copyText = document.getElementById("k4");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction53() {
+  // Get the text field
+  var copyText = document.getElementById("k5");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction54() {
+  // Get the text field
+  var copyText = document.getElementById("k6");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction55() {
+  // Get the text field
+  var copyText = document.getElementById("k7");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction56() {
+  // Get the text field
+  var copyText = document.getElementById("k8");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction57() {
+  // Get the text field
+  var copyText = document.getElementById("k9");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction58() {
+  // Get the text field
+  var copyText = document.getElementById("k10");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction59() {
+  // Get the text field
+  var copyText = document.getElementById("k11");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction60() {
+  // Get the text field
+  var copyText = document.getElementById("vt1");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction61() {
+  // Get the text field
+  var copyText = document.getElementById("vt2");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction62() {
+  // Get the text field
+  var copyText = document.getElementById("vt3");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction63() {
+  // Get the text field
+  var copyText = document.getElementById("vt4");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction64() {
+  // Get the text field
+  var copyText = document.getElementById("vt5");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction65() {
+  // Get the text field
+  var copyText = document.getElementById("vt6");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction66() {
+  // Get the text field
+  var copyText = document.getElementById("vt7");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction67() {
+  // Get the text field
+  var copyText = document.getElementById("vt8");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction68() {
+  // Get the text field
+  var copyText = document.getElementById("vt9");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction69() {
+  // Get the text field
+  var copyText = document.getElementById("vt10");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction70() {
+  // Get the text field
+  var copyText = document.getElementById("vt11");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction71() {
+  // Get the text field
+  var copyText = document.getElementById("vt12");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction72() {
+  // Get the text field
+  var copyText = document.getElementById("vt13");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction73() {
+  // Get the text field
+  var copyText = document.getElementById("vt14");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction74() {
+  // Get the text field
+  var copyText = document.getElementById("vt15");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  function myFunction75() {
+  // Get the text field
+  var copyText = document.getElementById("vt16");
+    
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);    
+  }
+
+  
+
+
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+
+<div class="footer">
+<marquee direction="right">
+<h5>CtrlV - Copy & Paste Blurbs fast!</h5>
+</marquee>
+</div>
+
+</body>
+</html> 
