@@ -38,6 +38,9 @@ That's the core of it. Everything else is built around making that workflow fast
 ## Key Features 💪
  
 **Scripts & Organisation**
+
+<img src="/Screenshots/dragdrop.gif"/>
+
 - One-click copy for any blurb
 - Tabs and collapsible sections to organise scripts by category, topic, or workflow
 - Colour coding for tabs and sections — find what you need at a glance
@@ -100,6 +103,8 @@ No shared drive? Just email the export file. It takes 10 seconds.
 ---
  
 ## Profiles Guide 👤
+
+<img src="/Screenshots/profile.gif"/>
  
 Profiles are useful if you handle multiple queues, multiple clients, or multiple brands in a single shift.
  
@@ -113,6 +118,8 @@ Export a profile to share it with a colleague. Import a profile to load someone 
 ---
  
 ## Knowledge Hub Guide 📚
+
+<img src="/Screenshots/knowledgehub.gif"/>
  
 The Knowledge Hub is a reference panel for things your team needs to *read*, not copy — SOPs, product guides, FAQs, escalation paths.
  
