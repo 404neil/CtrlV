@@ -4,7 +4,7 @@
 CtrlV is a free, single-file browser tool that lets you store and instantly copy frequently used messages, scripts, and templates — built for anyone who types the same things over and over.
  
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=flat-square)](https://404neil.github.io/CtrlV/)
-[![License](https://img.shields.io/badge/License-CC0-green?style=flat-square)](#license)
+![GitHub License](https://img.shields.io/github/license/404neil/CtrlV?style=flat-square)
  
 ---
  
@@ -159,16 +159,7 @@ Open an issue with what happened, which browser you were using, and whether it w
 **Code contributions:**
 CtrlV is a single `index.html` file — no build step, no node_modules. Open it in any text editor and you can see everything. Pull requests welcome.
  
----
- 
-## Support the Project ☕
- 
-CtrlV is free forever. If it saves you time, a small contribution helps keep it going.
- 
-☕ **[Buy Me a Coffee](https://buymeacoffee.com/404neil)**
- 
-You can also help by starring the repo ⭐, sharing it with your team, or contributing a translation.
- 
+
 ---
  
 ## Roadmap 🛠️
@@ -191,19 +182,19 @@ Things that started as "future improvements" and are now done ✅ — and what's
 - [x] Team sharing
 - [x] White-label support
 - [ ] Chrome extension with inline auto-expansion
-- [ ] Desktop app (Windows & Linux via Tauri)
-- [ ] Android app via Play Store
-- [ ] More languages — Arabic, Portuguese, Japanese, Chinese
- 
----
- 
-## License <img src="http://mirrors.creativecommons.org/presskit/buttons/88x31/png/cc-zero.png" width="60" height="21"/>
- 
-This project is released under the CC0-1.0 Universal license (public domain).
-You are free to use, modify, and distribute it without any restriction.
+- [ ] Desktop app (Windows & Linux)
+- [ ] Android app via GooglePlay Store
+- [ ] More languages
  
 ---
  
 ## Project Status 🟢
  
 Actively maintained. Started as a personal tool used in a real support workflow — now a full-featured productivity platform that still fits in a single HTML file.
+
+---
+ 
+## Support the Project ⭐
+ 
+CtrlV is free forever. If it saves you time, you can help by starring the repo ⭐, sharing it with your team, or contributing a translation.
+ 
