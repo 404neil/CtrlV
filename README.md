@@ -4,7 +4,11 @@
 CtrlV is a free, single-file browser tool that lets you store and instantly copy frequently used messages, scripts, and templates — built for anyone who types the same things over and over.
  
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=flat-square)](https://404neil.github.io/CtrlV/)
+![GitHub Repo stars](https://img.shields.io/github/stars/404neil/CtrlV?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/404neil/CtrlV?style=flat-square)
 ![GitHub License](https://img.shields.io/github/license/404neil/CtrlV?style=flat-square)
+
+
  
 ---
  
