@@ -20,7 +20,7 @@ What started as a personal tool has grown into something much bigger — with pr
  
 ## How It Works ⚙️
 
- <img src="copy.gif"/>
+ <img src="Screenstots/copy.gif"/>
 
 1. Open CtrlV in a browser tab alongside your CRM or chat window
 2. Organise your scripts into tabs and sections
